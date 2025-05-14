@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temperature Converter</title>
+  <style>
+    body {
+      background: #f0fbfc;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 320px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 1rem;
+      display: block;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 0.3rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056cc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h2>Temperature converter</h2>
+
+    <label>Degrees</label>
+    <input type="number" id="degrees" placeholder="Enter degrees" />
+
+    <label>Type</label>
+    <select id="type">
+      <option value="fahrenheit">Fahrenheit</option>
+      <option value="celsius">Celsius</option>
+      <option value="kelvin">Kelvin</option>
+    </select>
+
+    <label>Result</label>
+    <input type="text" id="result" readonly />
+
+    <button onclick="convertTemp()">Convert</button>
+  </div>
+
+  <script>
+    function convertTemp() {
+      const degree = parseFloat(document.getElementById("degrees").value);
+      const type = document.getElementById("type").value;
+      let result;
+
+      if (isNaN(degree)) {
+        alert("Please enter a valid number");
+        return;
+      }
+
+      if (type === "fahrenheit") {
+        result = ((degree - 32) * 5 / 9).toFixed(4) + " °C";
+      } else if (type === "celsius") {
+        result = ((degree * 9 / 5) + 32).toFixed(4) + " °F";
+      } else if (type === "kelvin") {
+        result = (degree - 273.15).toFixed(4) + " °C";
+      }
+
+      document.getElementById("result").value = result;
+    }
+  </script>
+
+</body>
+
+</html>

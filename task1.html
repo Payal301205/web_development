@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QuickResume - Build Your Resume Fast</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, rgb(208, 240, 255), rgb(240, 255, 247));
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: rgb(0, 123, 255);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgb(238, 248, 255);
+        }
+
+        .steps {
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(to right, rgb(208, 240, 255), rgb(240, 255, 247));
+        }
+
+        .steps h2 {
+            margin-bottom: 20px;
+        }
+
+        .step-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background: rgb(34, 34, 34);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn.primary {
+            background-color: #0a7a99;
+
+        }
+
+        .btn.secondary {
+            background-color: #4b9ca6;
+        }
+
+        .testimonials {
+            background: linear-gradient(to right, #f0fff0, #f0f8ff);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>QuickResume</h1>
+        <p>Create professional resumes in minutes - it's fast, easy, and free to start!</p>
+        <div class="button-group">
+            <a href="#" class="btn primary"> Start Free Trial</a>
+            <a href="#" class="btn secondary"> Sign Up with Email</a>
+        </div>
+
+    </header>
+
+    <section class="features">
+        <div class="feature">
+            <h3> Ready-Made Templates</h3>
+            <p>Pick from beautifully designed layouts.</p>
+        </div>
+        <div class="feature">
+            <h3> Student Friendly</h3>
+            <p>Perfect for freshers & college projects.</p>
+        </div>
+        <div class="feature">
+            <h3> Download Instantly</h3>
+            <p>Export your resume as PDF with one click.</p>
+        </div>
+    </section>
+
+    <section class="steps">
+        <h2>How it Works</h2>
+        <div class="step-list">
+            <p> <strong>Select</strong> a template that fits your style</p>
+            <p> <strong>Fill in</strong> your information easily</p>
+            <p> <strong>Download</strong> your resume in 1 click!</p>
+        </div>
+        <br>
+        <a href="#" class="btn">Create Now</a>
+    </section>
+
+    <section class="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial-cards">
+            <div class="card">
+                <p>"QuickResume made my college resume in just 10 minutes!"</p>
+                <strong>- Riya, B.Tech Student</strong>
+            </div>
+            <div class="card">
+                <p>"Simple, clean templates and fast PDF export. Loved it!"</p>
+                <strong>- Aman, Job Seeker</strong>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 QuickResume | Built by Payal Taitkar | Contact: payaltaitkar@gmail.com</p>
+    </footer>
+
+</body>
+
+</html>
